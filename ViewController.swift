@@ -110,19 +110,5 @@ class ViewController: UIViewController {
     @IBOutlet weak var sanfen2: UILabel!
     
     @IBOutlet weak var ershisi: UILabel!
-    @IBAction func jian(sender: UIButton) {
-        var g:Int32=0
-        var h:Int32=0
-        var i:Int32=0
-        if(!yifen2.text!.isEmpty){
-            g=(yifen2.text! as NSString).intValue
-        }
-        if(!ershisi.text!.isEmpty){
-            h=(ershisi.text! as NSString).intValue
-        }
-        i=h-g
-        ershisi.text="\(i)"
-    
-}
 
 }
