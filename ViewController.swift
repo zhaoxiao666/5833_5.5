@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         
         @IBOutlet var txtUname: UITextField!
         @IBOutlet var txtMobile: UITextField!
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
             //如果有数据则加载
             initUser()
         }
-        
+    
         //点击保存
         @IBAction func saveClicked(sender: AnyObject) {
             saveUser()
@@ -63,39 +64,19 @@ class ViewController: UIViewController {
     var y:Double=0.0;
     @IBOutlet weak var defen2: UILabel!
     var x1:Double=0.0;
+    var y1:Double=0.0;
+    @IBOutlet weak var zongdefen1: UILabel!
+    var x2:Double=0.0;
     var y2:Double=0.0;
+    @IBOutlet weak var zongdefen2: UILabel!
+    var x3:Double=0.0;
+    var y3:Double=0.0;
     @IBAction func jiayifen1(sender: UIButton) {
         var a:Int32=0
         var b:Int32=0
         var c:Int32=0
         if(!yifen1.text!.isEmpty){
             a=(yifen1.text! as NSString).intValue
-        }
-        if(!defen.text!.isEmpty){
-            b=(defen.text! as NSString).intValue
-        }
-        c=a+b
-        defen.text="\(c)"
-    }
-    @IBAction func jialiangfen1(sender: UIButton) {
-        var a:Int32=0
-        var b:Int32=0
-        var c:Int32=0
-        if(!liangfen1.text!.isEmpty){
-            a=(liangfen1.text! as NSString).intValue
-        }
-        if(!defen.text!.isEmpty){
-            b=(defen.text! as NSString).intValue
-        }
-        c=a+b
-        defen.text="\(c)"
-    }
-    @IBAction func jiasanfen1(sender: UIButton) {
-        var a:Int32=0
-        var b:Int32=0
-        var c:Int32=0
-        if(!sanfen1.text!.isEmpty){
-            a=(sanfen1.text! as NSString).intValue
         }
         if(!defen.text!.isEmpty){
             b=(defen.text! as NSString).intValue
@@ -116,49 +97,60 @@ class ViewController: UIViewController {
         f=d+e
         defen2.text="\(f)"
     }
-    @IBAction func jialiangfen2(sender: UIButton) {
-        var d:Int32=0
-        var e:Int32=0
-        var f:Int32=0
-        if(!liangfen2.text!.isEmpty){
-            d=(liangfen2.text! as NSString).intValue
+    @IBAction func jiayifen3(sender: UIButton) {
+        var g:Int32=0
+        var h:Int32=0
+        var i:Int32=0
+        if(!yifen3.text!.isEmpty){
+            g=(yifen3.text! as NSString).intValue
         }
-        if(!defen2.text!.isEmpty){
-            e=(defen2.text! as NSString).intValue
+        if(!zongdefen1.text!.isEmpty){
+            h=(zongdefen1.text! as NSString).intValue
         }
-        f=d+e
-        defen2.text="\(f)"
+        i=g+h
+        zongdefen1.text="\(i)"
+    }
+    @IBAction func jiayifen4(sender: UIButton) {
+        var j:Int32=0
+        var k:Int32=0
+        var l:Int32=0
+        if(!yifen4.text!.isEmpty){
+            j=(yifen4.text! as NSString).intValue
+        }
+        if(!zongdefen2.text!.isEmpty){
+            k=(zongdefen2.text! as NSString).intValue
+        }
+        l=j+k
+        zongdefen2.text="\(l)"
     }
     
-    @IBAction func jiasanfen2(sender: UIButton) {
-        var d:Int32=0
-        var e:Int32=0
-        var f:Int32=0
-        if(!sanfen2.text!.isEmpty){
-            d=(sanfen2.text! as NSString).intValue
-        }
-        if(!defen2.text!.isEmpty){
-            e=(defen2.text! as NSString).intValue
-        }
-        f=d+e
-        defen2.text="\(f)"
-    }
     @IBAction func qingchu(sender: UIButton) {
         defen.text!="0";
         x=0.0;
         y=0.0;
         defen2.text!="0";
         x1=0.0;
-        y2=0.0;
+        y1=0.0;
     }
+    @IBAction func qingling(sender: UIButton) {
+        defen.text!="0";
+        x=0.0;
+        y=0.0;
+        defen2.text!="0";
+        x1=0.0;
+        y1=0.0;
+        zongdefen1.text!="0";
+        x2=0.0;
+        y2=0.0;
+        zongdefen2.text!="0";
+        x3=0.0;
+        y3=0.0;
+        
+    }
+    
     @IBOutlet weak var yifen1: UILabel!
-    @IBOutlet weak var liangfen1: UILabel!
-    @IBOutlet weak var sanfen1: UILabel!
     @IBOutlet weak var yifen2: UILabel!
-    @IBOutlet weak var liangfen2: UILabel!
-    @IBOutlet weak var sanfen2: UILabel!
+    @IBOutlet weak var yifen3: UILabel!
+    @IBOutlet weak var yifen4: UILabel!
     
-    @IBOutlet weak var ershisi: UILabel!
-    
-
 }
